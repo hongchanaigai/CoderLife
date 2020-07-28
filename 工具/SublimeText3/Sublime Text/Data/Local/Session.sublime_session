@@ -1,0 +1,1154 @@
+{
+	"folder_history":
+	[
+		"/D/study",
+		"/D/study/大三下/逆向工程/lab/lab1",
+		"/D/CoderLife",
+		"/D/CoderLife/00_C语言基础/01_代码",
+		"/D/CoderLife/00_C语言基础/02_代码"
+	],
+	"last_version": 3176,
+	"last_window_id": 7,
+	"log_indexing": false,
+	"settings":
+	{
+		"new_window_height": 654.4,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"build_system_choices":
+			[
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/C++/C++ Single File.sublime-build",
+						"Run"
+					]
+				],
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyC++.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyC++.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyC++.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyC.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyC.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyC.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/MyC++.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyC++.sublime-build",
+						"Run"
+					]
+				],
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/MyC.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyC.sublime-build",
+						"Run"
+					]
+				],
+				[
+					[
+						[
+							"Packages/Java/Ant.sublime-build",
+							""
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/Java/JavaC.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/Java/Ant.sublime-build",
+							""
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/User/Java.sublime-build",
+							""
+						],
+						[
+							"Packages/User/Java.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/Java.sublime-build",
+						"Run"
+					]
+				],
+				[
+					[
+						[
+							"Packages/Java/Ant.sublime-build",
+							""
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/User/Java.sublime-build",
+							""
+						],
+						[
+							"Packages/User/Java.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/MyJava.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/User/Java.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/Java/Ant.sublime-build",
+							""
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/User/Java.sublime-build",
+							""
+						],
+						[
+							"Packages/User/Java.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/MyJava.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyJava.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyJava.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							"Syntax Check"
+						]
+					],
+					[
+						"Packages/Python/Python.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							"Syntax Check"
+						],
+						[
+							"Packages/User/MyPython.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyPython.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyPython.sublime-build",
+						"Run"
+					]
+				],
+				[
+					[
+						[
+							"Packages/Python/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							"Syntax Check"
+						]
+					],
+					[
+						"Packages/Python/Python.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/User/Java.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/MyJava.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyJava.sublime-build",
+						"Run"
+					]
+				]
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"P",
+						"Package Control: Install Package"
+					],
+					[
+						"p",
+						"Package Control: Install Package"
+					],
+					[
+						"Package Control: ",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/D/CoderLife/00_C语言基础/01_代码/00_测试/test.java",
+				"/D/CoderLife/程序库/C/贪吃蛇/贪吃蛇游戏（简单版）/Untitled1.c.dump",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/User/MyJava.sublime-build",
+				"/D/CoderLife/00_C语言基础/01_代码/00_测试/test.py",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/User/MyC++.sublime-build",
+				"/D/CoderLife/00_C语言基础/01_代码/00_测试/test.c",
+				"/D/CoderLife/00_C语言基础/01_代码/00_测试/test.cpp",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/User/MyC.sublime-build",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/User/MyPython.sublime-build",
+				"/D/CoderLife/00_C语言基础/01_代码/test.c",
+				"/D/CoderLife/00_C语言基础/01_代码/expinfo.dat",
+				"/D/CoderLife/00_C语言基础/01_代码/userinfo.dat",
+				"/D/CoderLife/00_C语言基础/01_代码/a.c",
+				"/D/CoderLife/00_C语言基础/01_代码/test.cpp",
+				"/D/CoderLife/00_C语言基础/02_代码/test.py",
+				"/D/CoderLife/00_C语言基础/02_代码/test.cpp",
+				"/D/CoderLife/00_C语言基础/02_代码/test.java",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/Default/Default (Windows).sublime-keymap",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/User/Default (Windows).sublime-keymap",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/User/Base File.sublime-settings",
+				"/D/CoderLife/00_C语言基础/02_代码/a.py",
+				"/C/Users/Administrator/AppData/Local/Temp/7zE8D44FBD5/README.md",
+				"/A/Sublime/Sublime Text Build 3176/Data/Packages/User/Package Control.sublime-settings",
+				"/A/Sublime/Sublime Text Build 3176/Packages/Boxy Theme Addon - Font Face/README.md"
+			],
+			"find":
+			{
+				"height": 32.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 32.0
+			},
+			"input":
+			{
+				"height": 44.8
+			},
+			"menu_visible": true,
+			"output.exec":
+			{
+				"height": 156.0
+			},
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 60.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 248.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 728.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/D/study/大三下/逆向工程/lab/lab5/attack.c",
+					"settings":
+					{
+						"buffer_size": 1915,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "Packages/User/MyC++.sublime-build",
+			"build_system_choices":
+			[
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/C++/C++ Single File.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/C++/C++ Single File.sublime-build",
+						"Run"
+					]
+				],
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyC++.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyC++.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyC++.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyC.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyC.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyC.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/MyC++.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyC++.sublime-build",
+						"Run"
+					]
+				],
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/MyC++.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/MyC.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyC++.sublime-build",
+						"Run"
+					]
+				],
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/MyC.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyC.sublime-build",
+						"Run"
+					]
+				],
+				[
+					[
+						[
+							"Packages/Java/Ant.sublime-build",
+							""
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/Java/JavaC.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/Java/Ant.sublime-build",
+							""
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/User/Java.sublime-build",
+							""
+						],
+						[
+							"Packages/User/Java.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/Java.sublime-build",
+						"Run"
+					]
+				],
+				[
+					[
+						[
+							"Packages/Java/Ant.sublime-build",
+							""
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/User/Java.sublime-build",
+							""
+						],
+						[
+							"Packages/User/Java.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/MyJava.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/User/Java.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/Java/Ant.sublime-build",
+							""
+						],
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/User/Java.sublime-build",
+							""
+						],
+						[
+							"Packages/User/Java.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/MyJava.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyJava.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyJava.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							"Syntax Check"
+						]
+					],
+					[
+						"Packages/Python/Python.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/Java/JavaC.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							"Syntax Check"
+						],
+						[
+							"Packages/User/MyPython.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyPython.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyPython.sublime-build",
+						"Run"
+					]
+				],
+				[
+					[
+						[
+							"Packages/Python/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							"Syntax Check"
+						]
+					],
+					[
+						"Packages/Python/Python.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/User/Java.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/MyJava.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyJava.sublime-build",
+						"Run"
+					]
+				],
+				[
+					[
+						[
+							"Packages/User/MyC++.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyC++.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyC++.sublime-build",
+						"Run"
+					]
+				],
+				[
+					[
+						[
+							"Packages/User/MyC.sublime-build",
+							""
+						],
+						[
+							"Packages/User/MyC.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/User/MyC.sublime-build",
+						""
+					]
+				]
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"P",
+						"Package Control: Install Package"
+					],
+					[
+						"p",
+						"Package Control: Install Package"
+					],
+					[
+						"Package Control: ",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"expanded_folders":
+			[
+				"/D/study",
+				"/D/study/大三下",
+				"/D/study/大三下/逆向工程",
+				"/D/study/大三下/逆向工程/lab",
+				"/D/study/大三下/逆向工程/lab/lab5"
+			],
+			"file_history":
+			[
+				"/D/study/大三下/网络安全实验/lab2/lab2.c",
+				"/D/study/大三下/逆向工程/lab/lab5/attack.c",
+				"/D/study/大三下/网络安全实验/lab2/lab2.cpp",
+				"/D/study/大三下/逆向工程/lab/lab1/q1.cpp",
+				"/D/study/大三下/逆向工程/lab/lab1/q2.cpp",
+				"/D/study/大三下/逆向工程/lab/lab1/q3.cpp",
+				"/D/study/大三下/逆向工程/lab/lab1/q4.py",
+				"/D/study/大三下/逆向工程/lab/lab1/lab8.txt",
+				"/D/study/大三下/逆向工程/lab/lab1/q1.py",
+				"/D/study/大三下/逆向工程/lab/lab1/q1.c",
+				"/D/CoderLife/00_C语言基础/01_代码/00_测试/test.java",
+				"/D/CoderLife/程序库/C/贪吃蛇/贪吃蛇游戏（简单版）/Untitled1.c.dump",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/User/MyJava.sublime-build",
+				"/D/CoderLife/00_C语言基础/01_代码/00_测试/test.py",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/User/MyC++.sublime-build",
+				"/D/CoderLife/00_C语言基础/01_代码/00_测试/test.c",
+				"/D/CoderLife/00_C语言基础/01_代码/00_测试/test.cpp",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/User/MyC.sublime-build",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/User/MyPython.sublime-build",
+				"/D/CoderLife/00_C语言基础/01_代码/test.c",
+				"/D/CoderLife/00_C语言基础/01_代码/expinfo.dat",
+				"/D/CoderLife/00_C语言基础/01_代码/userinfo.dat",
+				"/D/CoderLife/00_C语言基础/01_代码/a.c",
+				"/D/CoderLife/00_C语言基础/01_代码/test.cpp",
+				"/D/CoderLife/00_C语言基础/02_代码/test.py",
+				"/D/CoderLife/00_C语言基础/02_代码/test.cpp",
+				"/D/CoderLife/00_C语言基础/02_代码/test.java",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/Default/Default (Windows).sublime-keymap",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/User/Default (Windows).sublime-keymap",
+				"/D/CoderLife/工具/SublimeText3/Sublime Text/Data/Packages/User/Base File.sublime-settings",
+				"/D/CoderLife/00_C语言基础/02_代码/a.py",
+				"/C/Users/Administrator/AppData/Local/Temp/7zE8D44FBD5/README.md",
+				"/A/Sublime/Sublime Text Build 3176/Data/Packages/User/Package Control.sublime-settings",
+				"/A/Sublime/Sublime Text Build 3176/Packages/Boxy Theme Addon - Font Face/README.md"
+			],
+			"find":
+			{
+				"height": 32.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"folders":
+			[
+				{
+					"path": "D:\\study"
+				}
+			],
+			"groups":
+			[
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/D/study/大三下/逆向工程/lab/lab5/attack.c",
+							"semi_transient": true,
+							"settings":
+							{
+								"buffer_size": 1915,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1722,
+										1722
+									]
+								],
+								"settings":
+								{
+									"c_time":
+									[
+										128,
+										3,
+										99,
+										100,
+										97,
+										116,
+										101,
+										116,
+										105,
+										109,
+										101,
+										10,
+										100,
+										97,
+										116,
+										101,
+										116,
+										105,
+										109,
+										101,
+										10,
+										113,
+										0,
+										67,
+										10,
+										7,
+										228,
+										6,
+										13,
+										21,
+										37,
+										27,
+										13,
+										52,
+										163,
+										113,
+										1,
+										133,
+										113,
+										2,
+										82,
+										113,
+										3,
+										46
+									],
+									"is_init_dirty_state": false,
+									"origin_encoding": "ASCII",
+									"syntax": "Packages/C++/C.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 468.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 32.0
+			},
+			"input":
+			{
+				"height": 44.8
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.exec":
+			{
+				"height": 34.0
+			},
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,2,3,-1,-1,-1,-1,775,-25,63,740",
+			"project": "",
+			"replace":
+			{
+				"height": 60.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 248.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 7,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}
