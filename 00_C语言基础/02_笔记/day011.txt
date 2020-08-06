@@ -1,0 +1,247 @@
+day010 课程回顾
+
+
+一. 作用域
+	1. 普通局部变量
+		1) 属于某个{},在{}外部不能使用此变量,在{}内部是可以使用的
+		2) 执行到普通局部变量定义语句,才会分配空间,离开{},自动释放
+		3) 普通局部变量不初始化,默认值为随机数
+			{
+				int a;
+				if(1)
+				{
+					a = 10;
+					if(1)
+					{
+						a = 11;
+					}
+				}
+			}
+			
+			a = 10; //error
+
+	
+	2. static局部变量
+		1) 属于某个{},在{}外部不能使用此变量,在{}内部是可以使用的
+		2) 在编译阶段就已经分配空间,初始化只能使用常量
+		3) static局部变量不初始化,默认值为0
+		4) 离开{},static局部变量不会释放,只有整个程序结束才释放
+			void func()
+			{
+				int i = 0;
+				++i;
+				printf("i = %d\n", i);
+			}
+			
+			void static func()
+			{
+				static int i = 0; //只会初始化一次
+				++i;
+				printf("i = %d\n", i);
+			}
+			
+			func(); //1
+			func(); //1
+			
+			static func(); //1
+			static func(); //2
+			
+
+	3. 普通全局变量
+		1) 在编译阶段就已经分配空间,只有整个程序结束才释放
+		2) 普通全局变量只要定义了,任何地方都能使用,使用前需要声明
+		3) 所有.c文件,只能定义一次普通全局变量,但可以声明多次(外部链接)
+		
+		分文件使用普通全局变量
+			xxx.h(普通全局变量的声明)
+			extern int a;
+			
+			xxx.c(普通全局变量的定义)
+			int a = 0;
+
+
+	4. static全局变量
+		1) 在编译阶段就已经分配空间,只有整个程序结束才释放
+		2) static全局变量只能在定义所在的文件中使用(内部链接)
+		3) 不同的.c文件,可以定义一次static全局变量
+		
+
+	5. extern函数和static函数的区别(作用域)
+		1) extern函数所有文件都是调用,所有文件只能出现一次extern函数定义
+		2) static函数只能在定义所在的文件中调用此函数,不同文件,可以定义一次static函数
+		
+
+
+二. 内存布局
+
+	1. 程序没有运行前(除了堆区和栈区)
+		text(代码区): 函数,只读
+		data(数据区): 初始化的数据: 全局变量,static变量,文字常量(只读)
+		bss: 未初始化的数据: 全局变量,static变量
+		
+		
+	2. 程序运行,加载内存,多了栈区和堆区
+		text(代码区): 函数,只读
+		data(数据区): 初始化的数据: 全局变量,static变量,文字常量(只读)
+		bss: 未初始化的数据: 全局变量,static变量
+		stack(栈区): 程序自动申请空间,自动释放,非static局部变量
+		heap(堆区): 由用户手动申请空间,手动释放(malloc,free)
+
+
+	3. 内存操作函数
+		int a[10];
+		memset(a, 0, sizeof(a));
+		memset(a, 0, 10*sizeof(int));
+		
+		int a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		int b[10];
+		memcpy(b, a, 10*sizeof(int)); //最好不要出现内存重叠
+		memmove(b, a, 10*sizeof(int)); //可以出现内存重叠
+
+		memcmp(a, b, 5*sizeof(int));
+		= 0
+		> 0
+		< 0
+
+
+	4. 堆区空间使用
+		1) 栈区空间
+			//普通变量
+			int *p = NULL;
+			int a = 10;
+			p = &a; //p指向a的内存,栈区空间
+			*p = 100; //*p就是a,间接给a赋值
+			
+			//栈区数组
+			int *p = NULL;
+			int a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+			p = a; //指针和数组建立关系
+			p = &a[0];
+			
+			//操作指针所指向的内存
+			p[0] = 1;
+			*(p+0) = 1;
+			
+			
+		2) 堆区空间
+			//一个元素
+			int *p = NULL;
+			
+			//malloc的返回值就是堆区的首地址
+			p = (int *)malloc(sizeof(int));
+			*p = 100; //*p就是堆区内存
+			printf("*p = %d\n", *p);
+			
+			//释放p所指向的内存,但是p的值没有改变
+			//同一个内存不能多次释放
+			free(p);
+			p = NULL;
+			
+			//堆区数组
+			int *p = NULL; 
+			p = (int *)malloc(10 * sizeof(int));
+			p[0] = 1;
+			*(p+0) = 1;
+
+			free(p);
+			p = NULL;
+
+
+内存泄露: 动态分配空间,没有释放
+内存污染: 操作野指针所指向的内存,堆区越界
+
+
+
+day011 课堂记录
+
+const修饰的结构体指针变量:
+
+	struct Student
+	{
+		int age;
+		char name[50];
+		int score;
+	}; //有分号
+	
+	struct Student tmp;
+	struct Student *p1 = &tmp;
+	p1->age = 22; //ok
+	p1 = NULL; //ok
+	
+	//const修饰的是*,指针指向的内存不能修改
+	const struct Student *p2 = &tmp;
+	struct Student const *p1 = &tmp;
+	p2->age = 22; //error
+	p2 = NULL; //ok
+
+	//const修饰的是结构体指针变量p3,指针变量本身不能修改
+	struct Student * const p3 = &tmp;
+	p3->age = 22; //ok
+	p3 = NULL; //error
+
+
+
+
+//1. 指针指向栈区空间
+struct Student
+{
+	int age;
+	char name[50];
+	int score;
+}; //有分号
+
+
+struct Student *p;
+
+struct Student tmp;
+p = &tmp;
+
+p->age = 18;
+
+
+
+//2. 指针指向堆区空间
+struct Student
+{
+	int age;
+	char name[50];
+	int score;
+}; //有分号
+
+
+struct Student *p;
+p = (struct Student *)malloc(sizeof(struct Student));
+
+p->age = 18;
+
+
+
+
+//3. 字符指针
+
+//1) 字符指针保存字符常量首元素地址
+char *p;
+p = "huang"; //ok
+
+//2) 指向栈区空间
+char *p;
+char buf[50];
+p = buf;
+strcpy(p, "huang"); //往p所指向的内存拷贝内容
+
+//3) 指向堆区空间
+char *p;
+p = (char *)malloc(strlen("huang")+1);
+strcpy(p, "huang"); //往p所指向的内存拷贝内容
+
+
+
+
+
+
+
+
+
+
+
+
