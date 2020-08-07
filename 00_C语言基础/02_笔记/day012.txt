@@ -1,0 +1,314 @@
+day011	课程回顾
+
+1. 结构体基本操作
+	1) 结构体类型定义
+		//struct为关键字,Stu为自定义标示符
+		//struct Stu才是结构体类型
+		//结构体成员不能在定义类型时赋值
+		struct Stu
+		{
+			int age;
+			char name[50];
+			int score;
+		}; //有分号
+		
+	2) 结构体变量的定义和初始化
+		//结构体变量初始化和数组很类似,只有在定义时,才能初始化
+		//定义结构体变量时,别忘了struct关键字
+		struct Stu obj = {18, "huang", 59};
+
+	3) 结构体成员变量的使用
+		如果是普通变量,点运算符
+			obj.age = 18;
+			
+		如果是指针变量,->
+			(&ibj)->age = 18;
+
+
+2. 结构体指针变量
+	1) 指针变量指向栈区
+		struct Stu *p = NULL;
+		struct Stu obj; //栈区结构体
+		p = &obj; //指向栈区
+		p->age = 18;
+		(*p).age = 18;
+		
+	2) 指针变量指向堆区
+		struct Stu *p = NULL;
+		
+		//指向堆区
+		p = (struct Stu *)malloc(sizeof(struct Stu));
+		p->age = 18;
+		
+		free(p);
+		p = NULL;
+		
+	3)const修饰的指针变量
+		//看const修饰的是*,还是变量
+		//如果是*,说明结构体成员不允许修改
+		//如果是变量,说明结构体指针变量不允许修改
+		
+		const struct Stu *p;
+		struct Stu const *p;
+		p = NULL; //ok
+		//p->age = 18; //error
+		
+		struct Stu * const p;
+		//p = NULL; //error
+		p->age = 18; //ok
+		
+		const struct Stu * const p;
+		//p = NULL; //error
+		//p->age = 18; //error
+		
+
+3. 结构体数组
+	struct Stu obj[3] = {
+		{18, "aaaaaa", 55},
+		{39, "cccccc", 30},
+		{28, "hhhhhh", 90}
+	};
+	
+	struct Stu tmp[3];
+	int i;
+	for(i = 0; i < 3; ++i)
+	{
+		(tmp+i)->age = 18 + i;
+		( *(tmp+i) ).age = 18 + i;
+		tmp[i].age = 18 + i; //常用
+	}
+
+
+4. 结构体和函数
+	1) 同类型结构体变量赋值
+		struct Stu obj1 = {18, "sadad", 56};
+		struct Stu obj2;
+		obj2 = obj1;
+		
+	2) 函数值传递
+		struct Stu p;
+		//结构体变量本身传递(值传递),形参修改不会影响实参
+		//调用完毕fun()函数,p成员还是没有赋值
+		fun(p);
+		void fun(struct Stu p)
+		{
+			p.age = 18;
+			strcpy(p.name, "safeaf");
+			p.score = 80;
+		}
+		
+		
+		struct Stu s = {97, "asdfjoa", 80};
+		fun(s); //值传递
+		void fun(struct Stu s) //传参时,把实参s成员的内容给形参s赋值
+		{	//虽然能打印内容,但是打印内容的fun形参s成员变量的内容
+			printf("%d, %s, %d\n", s.age, s.name, s.score);
+		}
+		
+	3) 函数地址传递
+		struct Stu p;
+		fun(&p); //地址传递,形参修改可以间接影响到实参
+		void fun(struct Stu *p)
+		{
+			p->age = 79;
+			strcpy(p>name, "aefgwrsvb");
+			p->score = 86;
+		}
+
+
+5. 结构体套一级指针
+
+	struct Stu
+	{
+		char *name; //一级指针
+	}; //有分号
+	
+	1) 栈区结构体
+		struct Stu s;
+		
+		s.name = (char *)malloc(strlen("sdgeah") + 1);
+		strcpy(s.name, "sdgeah");
+		
+		free(s.name);
+		
+	2) 堆区结构体
+		struct Stu *p;
+		p = (struct Stu *)malloc(sizeof(struct Stu));
+		s->name = (char *)malloc(strlen("sdgeah") + 1);
+		strcpy(s->name, "sdgeah");
+		
+		free(p->name);
+		free(p);
+
+
+6. 共用体(联合体)
+	//只需要把结构体的struct改成union
+	union Test
+	{
+		unsigned char a;
+		unsigned short b;
+		unsigned int c;
+	}; //有分号
+	
+	//union Test类型名
+	//tmp是变量名
+	union Test tmp;
+	
+	//共用体,所有成员共用一段内存空间
+	//所有成员的首地址是一样的
+	printf("%d, %d, %d\n", &tmp.a, &tmp.b, &tmp.c);
+	
+	//共用体的大小为最大成员的大小
+	printf("sizeof(union Test) = %lu\n", sizeof(union Test));
+	
+	//改变一个成员,会影响到另外的成员
+	//左边是高位,右边是低位
+	//高位放高地址,低位放低地址(小端)
+	tmp.c = 0xaabbccdd;
+	printf("c1 = %x\n", tmp.c); //aabbccdd
+	printf("a1 = %x\n", tmp.a); //dd
+	printf("b1 = %x\n", tmp.b); //ccdd
+
+	tmp.a = 0x11;
+	printf("c2 = %x\n", tmp.c); //aabbcc11
+	
+	tmp.b = 0x1234;
+	printf("c3 = %x\n", tmp.c); //aabb1234
+
+
+
+7. 枚举
+	//定义枚举类型enum{};
+	//enum Color叫枚举类型
+	enum Color
+	{
+		//枚举成员,枚举常量
+		//如果成员不复制,第0个成员值为0,后一个成员比前一个成员大1
+		red, blue, green, black, white
+	};
+	
+	//可以直接把枚举常量赋值给整型变量
+	int flag = red;
+	
+	//定义一个枚举常量,再用枚举常量赋值
+	enum Color tmp = red;
+	
+	//可以直接用一个常量给枚举变量赋值,但是不推荐
+	//tmp = 100;
+	
+	printf("%d\n", red);
+
+
+
+8. typedef的使用
+	//typedef的作用就是给一个已存在的类型起一个别名
+	//typedef不能创建新类型
+	typedef int int64;
+	int64 a; //int a;
+	
+	//把struct Student类型,起一个别名Stu
+	typedef struct Student
+	{
+		//结构体成员
+		int age;
+		char *name;
+		int score;
+	}Stu;
+	
+	//把struct Student类型,起一个别名Stu
+	typedefstruct Student S;
+	
+	struct Student obj; //定义变量必须加struct关键字
+	Stu obj2;
+	S tmp;
+
+
+
+day012	课堂记录
+
+
+文件概述
+	printf(); //把内存的值写到屏幕
+	
+	scanf();
+
+
+
+1. 打开文件fopen()
+
+2. 读写文件
+	1) 按字符读写fgetc(),fputc()
+	2) 按字符串(行)读取文件fgets(),fputs()
+	3) 文件结尾判断feof()
+	
+3. 关闭文件fclose()
+
+
+
+
+相对路径:
+	1. 在Linux,相对路径相对于可执行程序
+	2. VS
+		编译同时运行程序,相对路径,相对于xxx.vcxproj(项目文件)所在的路径
+		如果直接运行程序,相对路径,相对于可执行程序
+	3. Qt
+		编译同时运行程序,相对路径,相对于debug所在路径
+		如果直接运行程序,相对路径,相对于可执行程序
+
+fopen("1.txt", "w");
+
+char *p = "1.txt";
+fopen(p, "w")
+
+char p[] = "1.txt";
+fopen(p, "w")
+
+char *mode = "w";
+fopen("1.txt", mode);
+
+
+
+1. 如果是文本文件,可以通过-1(EOF)判断文本文件是否结尾
+2. 如果是二进制文件,不能以-1判断文件结尾
+3. feof()判断文件是否结尾,任何文件都能判断
+
+feof(fp); //如果到文件结尾,返回真
+1. 如果第一次没有对文件进行读操作,直接调用此函数,永远返回假(文件没有到结尾)
+2. 此函数必须先读,再调用feof()才有意义
+3. 调用此函数,光标不会自动往后移
+4. 必须读取后,才能判断是否结束,判断的是读取的字符
+
+
+
+将mycat放在cat所在路径,mycat就是命令
+
+
+
+作业
+	1. 产生500个100以内的随机数,以如下格式写入文件中(没写一个数字后换行):
+		10
+		20
+		30
+		提示:fputs(),sprintf()
+		
+	2. 读取1中文件内容,把文件的每行数字分别放在一个数组中int a[1024],然后打印数组内容
+		提示:fgets(),sscanf(),feof()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
