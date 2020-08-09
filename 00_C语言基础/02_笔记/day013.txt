@@ -1,0 +1,180 @@
+day012	课程回顾
+
+1. 文件指针
+	1) 文件指针不能直接操作,必须通过文件操作库函数使用
+		FILE *fp = NULL;
+	
+	文件句柄,结构体变量,里面有一些成员,保存操作文件的一些情况(系统自动处理)
+	FILE不同平台智能保证FILE是一样的,内部成员功能一样,成员名字不一样
+		具体见图day013_00_文件句柄结构体.png
+
+	//"r": 只读方式打开文件,文件不存在出错
+	//"w": 只写方式打开文件,文件不存在新建文件,文件存在清空内容
+	//"a": 追加方式打开文件,文件不存在新建文件,文件存在光标放在最后
+	fp = fopen("./1.txt", "r");
+	if(fp == NULL)
+	{
+		//只能打印库函数失败原因
+		perror("fopen error");
+	}
+
+
+2. 关于文件路径传参
+	FILE *fp = NULL;
+	fp = fopen("./1.txt", "r");
+	
+	char buf[] = "./1.txt"; 
+	fp = fopen(buf, "r"); //把buf所代表的数组内容传递过去,fopen("./1.txt", "r");
+	
+	char *p = "1.txt";
+	fp = fopen(p, "r"); //把p所指向的内容,传递过去
+	
+	VS相对路径说明
+		1) 如果编译运行,相对路径,相对于项目
+		2) 如果直接运行,相对路径,相对于程序
+		
+	Qt相对路径说明
+		1) 如果编译运行,相对路径,相对于debug
+		2) 如果直接运行,相对路径,相对于程序
+
+
+3. 关闭文件
+	fclose(fp);
+	fp = NULL;
+	
+	
+4. 概念	
+	接口,API,方法,函数
+	文件操作步骤
+		1) 打开文件
+		2) 读写文件
+		3) 关闭文件
+
+
+5. 文件的读写操作
+	1) 按字符读写文件fgetc(),fputc()
+		//往fp指向的文件读取一个字符,字符放在ch,光标自动往后移
+		char ch = fgetc(fp);
+		
+		//如果判断文件结束,EOF只针对文本文件
+		//在文件结束的地方,结束符-1
+		while(1)
+		{
+			ch = fgetc(fp);
+			if(ch == -1)
+			if(ch == EOF)
+			{
+				break;
+			}
+		}
+
+
+1. 如果是文本文件,可以通过-1(EOF)判断文件是否结尾
+2. 如果是二进制文件,不能以-1判断文件结尾
+3. feof()判断文件是否结尾,任何文件都能判断
+
+
+//判断传递过来的文件指针,此文件指针所代表的文件是否到结尾
+//如果文件到结尾,返回真(1),如果没有结尾,返回假(0)
+feof()
+
+feof(fp); //如果到文件结尾,返回真
+1. 如果第一次没有对文件进行读操作,直接调用此函数,永远返回假(文件没有到结尾)
+2. 此函数必须,先读,再调用feof()才有意义
+3. 调用此函数,光标不会自动往后移
+4. 必须读取后,才能判断是否结束,判断的是读取的字符
+	fp = fopen("./1.txt", "r");
+	while(!feof(fp)) //文件没有结尾,进入循环
+	{
+		//死循环
+	}
+	
+	while(1)
+	{
+		ch = fgetc(fp);
+		printf("ch = %d\n", ch); //多出一个-1
+		if(feof(fp))
+		{
+			break;
+		}
+		printf("ch = %d\n", ch);
+	}
+
+
+一个字符一个字符写文件
+	char buf[] = "hello huang";
+	int i = 0;
+	int n = strlen(buf);
+	for(i = 0; i < n; ++i)
+	{
+		//往fp所在文件写字符,写完后光标自动往后移
+		fputs(buf[i], fp);
+	}
+
+
+按行读写文件fgets,fputs
+	char buf[1024] = {0};
+	while(1)
+	{
+		//往fp所在文件读取内容,放在buf所在的内容中,最大读取sizeof(buf)-1
+		//默认读取到"\n",或者文件结尾,或者出错,结束本次读取
+		fgets(buf, sizeof(buf), fp);
+		if(feof(fp))
+		{
+			break;
+		}
+	}
+
+
+
+
+
+day013	课堂记录
+
+Windows和Linux文本文件的区别
+	1. b是二进制模式的意思,b只是在Windows系统有效
+	2. 在Windows平台下,以"文本"方式打开文件,用"r","w",不加b
+	3. 在Windows平台下,以"二进制"方式打开文件,用"rb", "wb"
+	4. Linux无区别,为了兼容可以直接加b
+	
+	Windows平台下的文本换行符是"\r\n"
+	Linux平台下的文本换行符是"\n"
+
+
+int fseek(FILE *stream, ;ong offest, int whence);
+
+SEEK_SET: 从文件开头移动offset个字节
+SEEK_CUR: 从当前位置移动offset个字节
+SEEK_END: 从文件末尾移动offset个字节
+
+//开头不能往左移,末尾可以往右移
+fseek(fp, 0, SEEK_SET); //在开头偏移0字节,回到开头
+fseek(fp, 100, SEEK_SET); //在开头向右偏移100字节
+
+fseek(fp, 0, SEEK_CUR); //在当前位置偏移0字节
+fseek(fp, 100, SEEK_CUR); //在当前位置向右偏移100字节
+fseek(fp, -100, SEEK_CUR); //在当前位置向左偏移100字节
+
+fseek(fp, 0, SEEK_END); //在末尾偏移0字节,移动到最后
+
+
+
+作业:
+	1. 将一下结构体类型变量,以二进制的形式存放在文件中,并且可以实现读的接口,打印读出来的信息.
+		typedef struct Student
+		{
+			char *name; //名字
+			int id;
+			int name_len; //名字长度
+		}Stu;
+		
+		Stu s; //定义结构体变量
+		//结构体成员赋值
+		s.id = 1;
+		s.name_len = strlen("huang"); //名字长度
+		s.name = (char *)malloc(s.name_len + 1);
+		strcpy(s.name, "huang");
+
+
+
+
